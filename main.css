@@ -1,0 +1,48 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+#time {
+  color: white;
+  font-size: 10em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+body {
+  background: #034F84;
+  transition: background 5s;
+}
+.clock_container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* FULLSCREEN */
+
+:-webkit-full-screen .button_fullscreen {
+  visibility: hidden;
+  /* properties */
+}
+
+:-moz-full-screen .button_fullscreen{
+    visibility: hidden;
+  /* properties */
+}
+
+:-ms-fullscreen .button_fullscreen{
+    visibility: hidden;
+  /* properties */
+}
+
+:full-screen .button_fullscreen{ /*pre-spec */
+    visibility: hidden;
+  /* properties */
+}
+
+:fullscreen .button_fullscreen{ /* spec */
+    visibility: hidden;
+  /* properties */
+}
