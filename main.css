@@ -1,48 +1,122 @@
+:root {
+    --main_color: #034F84;
+}
+
 html, body {
-  margin: 0px;
-  padding: 0px;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lato', sans-serif;
 }
+
 #time {
-  color: white;
-  font-size: 10em;
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
+    color: white;
+    font-size: 10em;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
 }
+
 body {
-  background: #034F84;
-  transition: background 5s;
+    background: var(--main_color);
+    transition: background 2s;
 }
+
 .clock_container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 /* FULLSCREEN */
 
 :-webkit-full-screen .button_fullscreen {
-  visibility: hidden;
-  /* properties */
+    visibility: hidden;
+    /* properties */
 }
 
-:-moz-full-screen .button_fullscreen{
+:-moz-full-screen .button_fullscreen {
     visibility: hidden;
-  /* properties */
+    /* properties */
 }
 
-:-ms-fullscreen .button_fullscreen{
+:-ms-fullscreen .button_fullscreen {
     visibility: hidden;
-  /* properties */
+    /* properties */
 }
 
-:full-screen .button_fullscreen{ /*pre-spec */
+:full-screen .button_fullscreen {
+    /*pre-spec */
     visibility: hidden;
-  /* properties */
+    /* properties */
 }
 
-:fullscreen .button_fullscreen{ /* spec */
+:fullscreen .button_fullscreen {
+    /* spec */
     visibility: hidden;
-  /* properties */
+    /* properties */
+}
+
+.button {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-style: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    border: 3px solid white;
+    /*  box-shadow: 0px 1px 3px black; */
+    background: transparent;
+    transition: 0.3s ease;
+    overflow: hidden;
+    color: white;
+    position: relative;
+}
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+    color: black;
+}
+
+.button::after {
+    background-color: white;
+    z-index: -1;
+}
+
+.button:hover::after {
+    width: 120%;
+    height: 4000%;
+    opacity: 1;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg) translateZ(0);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg) translateZ(0);
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+.button_fullscreen {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#soaplogo {
+    transition: all 0.9s ease-out;
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
