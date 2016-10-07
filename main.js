@@ -51,7 +51,7 @@ setInterval(function() {
 
     active++;
     if (active == colors.length) active = 0;
-}, 10000);
+}, 30000);
 
 
 // OPEN WINDOW
