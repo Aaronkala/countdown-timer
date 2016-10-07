@@ -1,11 +1,15 @@
 :root {
     --main_color: #034F84;
+    --secondary_color: #fff;
 }
 
 html, body {
     margin: 0px;
     padding: 0px;
     font-family: 'Lato', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    color:white;
 }
 
 #time {
@@ -20,13 +24,17 @@ body {
     transition: background 2s;
 }
 
-.clock_container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    padding: 30px;
 }
-
+.row {
+    text-align: center;
+    width: 100%;
+}
+.clock_container {
+    position: relative;
+    height: 100vh;
+}
 
 /* FULLSCREEN */
 
@@ -57,6 +65,49 @@ body {
     /* properties */
 }
 
+input.seethrough_form {
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+}
+.maincontent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  -webkit-font-smoothing: antialiased;
+  width:60%;
+  text-align: center;
+
+}
+.col_50 {
+  width: 20%;
+}
+
+input.seethrough_form::-webkit-input-placeholder {
+    /* Chrome */
+    color: white;
+}
+
+input.seethrough_form:-ms-input-placeholder {
+    /* IE 10+ */
+    color: white;
+}
+
+input.seethrough_form::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white;
+    opacity: 1;
+}
+
+input.seethrough_form:-moz-placeholder {
+    /* Firefox 4 - 18 */
+    color: white;
+    opacity: 1;
+}
+
 .button {
     box-sizing: border-box;
     padding: 10px 20px;
@@ -72,8 +123,9 @@ body {
     color: white;
     position: relative;
 }
+
 .button:focus {
-  outline: none;
+    outline: none;
 }
 
 .button:hover {
@@ -119,4 +171,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+form {
+  width: 100%;
 }

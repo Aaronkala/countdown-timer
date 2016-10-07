@@ -6,10 +6,14 @@
     <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-    <style id="myStyle">.button:hover {color: var(--main_color)}</style>
+    <style id="myStyle">
+        .button:hover {
+            color: var(--main_color)
+        }
+    </style>
 </head>
 
-<body>
+<body onload="displayTime();">
     <div class="container">
         <div class="clock_container">
             <span id="time">05:00</span><br>

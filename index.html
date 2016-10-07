@@ -5,14 +5,28 @@
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <style id="myStyle">.button:hover {color: var(--main_color)}</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style id="myStyle">
+        .button:hover {
+            color: var(--main_color)
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="clock_container">
-            <button class="button" type="button" onClick="openWindow()">Submit</button>
+            <div class="maincontent">
+                <h2> Input countdown duration </h2>
+                <form>
+                    <div class="row">
+                        <input class="seethrough_form col_50" type="text" placeholder="minutes" id="myMinutes">
+                        <input class="seethrough_form col_50" type="text" placeholder="seconds" id="mySeconds">
+                    </div>
+                </form>
+                <br>
+                <button class="button" type="button" onClick="time()">Submit</button>
+            </div>
         </div>
     </div>
 </body>
