@@ -159,7 +159,7 @@ input.seethrough_form:-moz-placeholder {
 
 .button_fullscreen {
     position: absolute;
-    bottom: 50px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
 }
