@@ -18,7 +18,22 @@
         <div class="clock_container">
             <div class="maincontent">
                 <h2> Input countdown duration </h2>
-                <form>
+                <form action='' method='POST' enctype='multipart/form-data'>
+                    <div class="backgroundImages">
+                    </div>
+                    <div class="row">
+                        <input id="myFile" type='file' name='userFile'><br>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <input type="radio" name="color" value="color1" checked>
+                            <div class="colordisplay color1">#FAE03C</div>
+                        </label>
+                        <label>
+                            <input type="radio" name="color" value="color2">
+                            <div class="colordisplay color2">#034F84</div>
+                        </label>
+                    </div>
                     <div class="row">
                         <input class="seethrough_form col_50" type="text" placeholder="minutes" id="myMinutes">
                         <input class="seethrough_form col_50" type="text" placeholder="seconds" id="mySeconds">
