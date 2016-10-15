@@ -3,14 +3,19 @@ var myTime = {};
 function time() {
     var myMinutes = Number(document.getElementById("myMinutes").value);
     var mySeconds = Number(document.getElementById("mySeconds").value);
+    var bg_file_fake = document.getElementById("myFile").value;
+    var bg_file = bg_file_fake.replace("C:\\fakepath\\", "Backgrounds\\")
+    console.log(bg_file);
     localStorage.setItem("myMinutes", myMinutes);
     localStorage.setItem("mySeconds", mySeconds);
+    localStorage.setItem("bg_file", bg_file);
     openWindow();
 };
 
 function getTime() {
     var duration = localStorage.getItem("duration");
     var display = localStorage.getItem("display");
+    document.querySelector('.bg').src = localStorage.getItem("bg_file");
     startTimer(duration, display);
 };
 
@@ -94,14 +99,14 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-// THIS IS NOT WORKING! Inputting new values. console.log prints it out.
+// HIDING THE TIMER AND SHOWING PICTURE
 
         display.textContent = minutes + ":" + seconds;
         console.log(minutes + ":" + seconds);
         if (--timer < 0) {
             timer = 0;
             document.querySelector('#time').style.visibility = "hidden";
-            document.querySelector('#soaplogo').style.opacity = "1";
+            document.querySelector('.bg').style.opacity = "1";
         }
     }, 1000);
 };
