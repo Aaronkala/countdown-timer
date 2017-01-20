@@ -39,17 +39,8 @@ function displayTime() {
 }
 
 // SETTING BACKGROUND COLORS
-var colors = [];
-function setColors() {
-    for(i)
-    colors 
-}
+var colors = ['#FAE03C', '#98DDDE', '#034F84'];
 
-// CYCLE BETWEEN BACKGROUND COLORS
-if(colors[0] == null){
-    var colors = ['#FAE03C', '#98DDDE', '#034F84'];
-}
-console.log(colors);
 var active = 0;
 setInterval(function() {
 
