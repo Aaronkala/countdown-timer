@@ -146,15 +146,13 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
         console.log(minutes + ":" + seconds);
         if (timer < 15 && videolive == 0) {
-            document.querySelector('.video-foreground').innerHTML = '<iframe src="'+ myVideo +'" frameborder="0" allowfullscreen></iframe>';
-            videolive = 1;
         }
         if (--timer < 0) {
             timer = 0;
             document.querySelector('#time').style.visibility = "hidden";
             document.querySelector('.bg').style.opacity = "1";
             document.querySelector('.bg').style.zIndex = "5";
-            document.querySelector('.video-foreground').style.zIndex = "20";
+            //document.querySelector('.video-foreground').style.zIndex = "20";
         }
     }, 1000);
 };
