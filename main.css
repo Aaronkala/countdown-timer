@@ -2,6 +2,11 @@
     --main_color: #034F84;
     --secondary_color: #fff;
 }
+@font-face {
+    font-family: California;
+    src: url(ONEFINGER_CRE.ttf);
+}
+
 
 html, body {
     margin: 0px;
@@ -14,14 +19,28 @@ html, body {
 
 #time {
     color: white;
-    font-size: 10em;
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
+    font-size: 15em;
+    font-family: 'California';
 }
 
 body {
-    background: var(--main_color);
-    transition: background 2s;
+
+}
+.background1 {
+    position:fixed;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    opacity: 1;
+    width:100vw;
+    height:100vh;
+    transition: 1s ease;
+}
+.background2 {
+    position:fixed;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    opacity: 0;
+    width:100vw;
+    height:100vh;
+    transition: 1s ease;
 }
 
 .container {
@@ -103,6 +122,9 @@ input.seethrough_form {
     color: white;
 }
 
+input.seethrough_form:focus {
+    outline-color: rgba(1,1,1,0);
+}
 label>input {
     /* HIDE RADIO */
     visibility: hidden;
@@ -150,14 +172,17 @@ input.seethrough_form:-moz-placeholder {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    -webkit-font-smoothing: antialiased;
+    transform: translate(-50%, -50%);
     width: 60%;
     text-align: center;
 }
 
 .col_50 {
     width: 20%;
+}
+.col_100 {
+    margin-top: 5px;
+    width: 40%;
 }
 
 .button {
@@ -202,8 +227,8 @@ input.seethrough_form:-moz-placeholder {
     -webkit-transition: all .3s ease-out;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%) rotate(45deg) translateZ(0);
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg) translateZ(0);
+    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
     height: 0;
     width: 0;
     opacity: 0;
@@ -213,7 +238,7 @@ input.seethrough_form:-moz-placeholder {
     position: absolute;
     bottom: -50px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: X(-50%);
 }
 
 /*
@@ -248,3 +273,20 @@ img.bg {
 form {
     width: 100%;
 }
+
+
+
+.video-background {
+  background: #000;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: -99;
+}
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
