@@ -178,11 +178,15 @@ input.seethrough_form:-moz-placeholder {
 }
 
 .col_50 {
+    margin-top: 5px;
     width: 20%;
 }
 .col_100 {
     margin-top: 5px;
     width: 40%;
+}
+.buttons {
+    margin-top: 5px;
 }
 
 .button {
@@ -285,4 +289,58 @@ form {
     opacity: 0;
     transition: 1s ease;
     visibility: hidden;
+}
+.specialOptions {
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.specialButton {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-style: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    border: 3px solid white;
+    /*  box-shadow: 0px 1px 3px black; */
+    background: transparent;
+    transition: 0.3s ease;
+    overflow: hidden;
+    color: white;
+    position: relative;
+}
+
+.specialButton:focus {
+    outline: none;
+}
+
+.specialButton:hover {
+    color: black;
+}
+
+.specialButton::after {
+    background-color: white;
+    z-index: -1;
+}
+
+.specialButton:hover::after {
+    width: 120%;
+    height: 4000%;
+    opacity: 1;
+}
+
+.specialButton::after {
+    content: "";
+    position: absolute;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    height: 0;
+    width: 0;
+    opacity: 0;
 }

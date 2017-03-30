@@ -27,12 +27,17 @@
                         <input class="seethrough_form col_50" type="text" placeholder="minutes" id="myMinutes">
                         <input class="seethrough_form col_50" type="text" placeholder="seconds" id="mySeconds">
                     </div>
-                    <div class="row">
-                        <input class="seethrough_form col_100" type="text" placeholder="link for video" id="myVideoLink">
+                    <div class="specialOptions">
+                        <div class="row">
+                            <input class="seethrough_form col_50" type="text" placeholder="link for video" id="myVideoLink">
+                            <input class="seethrough_form col_50" type="text" placeholder="link for image" id="myImage">
+                        </div>
                     </div>
                 </form>
-                <br>
-                <button class="button" type="button" onClick="time()">Submit</button>
+                <div class="buttons">
+                    <button class="specialButton" type="button" onClick="showSpecial()">More</button>
+                    <button class="button" type="button" onClick="time()">Submit</button>
+                </div>
             </div>
         </div>
     </div>

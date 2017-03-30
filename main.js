@@ -1,6 +1,6 @@
 var myTime = {};
 var myVideo;
-
+var myImage;
 
 //INIT VIDEO
 
@@ -42,9 +42,11 @@ function time() {
     var myMinutes = Number(document.getElementById("myMinutes").value);
     var mySeconds = Number(document.getElementById("mySeconds").value);
     var myVideoLink = document.getElementById("myVideoLink").value;
+    var myImage = document.getElementById("myImage").value;
     localStorage.setItem("myMinutes", myMinutes);
     localStorage.setItem("mySeconds", mySeconds);
     localStorage.setItem("myVideoLink", myVideoLink);
+    localStorage.setItem("myImage", myImage);
     openWindow();
 };
 
@@ -61,6 +63,7 @@ function displayTime() {
     var myMinutes = localStorage.getItem("myMinutes");
     var mySeconds = localStorage.getItem("mySeconds");
     myVideo = localStorage.getItem("myVideoLink");
+    myImage = localStorage.getItem("myImage");
     var duration = (60 * Number(myMinutes)) + Number(mySeconds);
 
     localStorage.setItem("duration", duration);
@@ -182,7 +185,7 @@ function startTimer(duration, display) {
     var timer = duration,
         minutes, seconds;
     setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
+        minutes = parseInt(timer / 60, 10);
         seconds = parseInt(timer % 60, 10);
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
@@ -195,6 +198,9 @@ function startTimer(duration, display) {
         if (timer < 2 && videolive == 0) {
             if(videoid != null) {
                 player.loadVideoById(videoid[1]);
+            }
+            if(myImage != null) {
+                document.querySelector('.bg').src = myImage;
             }
             videolive = 1;
         }
@@ -279,5 +285,17 @@ function parseVideo() {
         console.log("video id = ", videoid[1]);
     } else {
         console.log("The youtube url is not valid.");
+    }
+}
+var toggle = 0;
+function showSpecial() {
+    if(toggle == 0) {
+        document.querySelector('.specialOptions').style.height = "46px";
+        document.querySelector('.specialButton').innerHTML = "Hide";
+        toggle = 1;
+    } else if (toggle == 1) {
+        document.querySelector('.specialOptions').style.height = "0px";
+        document.querySelector('.specialButton').innerHTML = "More";
+        toggle = 0;
     }
 }
