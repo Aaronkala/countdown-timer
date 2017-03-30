@@ -193,14 +193,18 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
         console.log(minutes + ":" + seconds);
-        if (timer < 2 && videolive == 0) {
+        if (timer < 15 && videolive == 0) {
             if(videoid != null) {
                 player.loadVideoById(videoid[1]);
+                stopVideo();
             }
             if(myImage != null) {
                 document.querySelector('.bg').src = myImage;
             }
             videolive = 1;
+        }
+        if(timer < 2 && videoid != null) {
+            player.playVideo();
         }
         if (--timer < 0) {
             timer = 0;
@@ -303,11 +307,17 @@ var counter = 0;
 function information(){
     if (counter == 0){
         document.querySelector("#infoButton").className = "fa fa-times-circle fa-2x";
-        document.querySelector(".informationBox").style.height = "120px";
+        document.querySelector(".informationBox").style.height = "140px";
         counter = 1;
     } else if (counter == 1) {
         document.querySelector("#infoButton").className = "fa fa-info-circle fa-2x";
         document.querySelector(".informationBox").style.height = "0px";
         counter = 0;
     }
+}
+function fillTest(){
+    document.querySelector("#mySeconds").value = "30";
+    showSpecial();
+    document.querySelector("#myVideoLink").value = "https://www.youtube.com/watch?v=z5xTF4JtsIE";
+    document.querySelector("#myImage").value = "https://raw.githubusercontent.com/Aaronkala/countdown-timer/master/Backgrounds/soap-arvokas3.jpg";
 }
