@@ -125,7 +125,6 @@ var active = 0;
 var b = 1;
 var a = 1;
 setInterval(function () {
-    console.log(b);
     if (b != 1) {
         b = 1;
         a = 2;
@@ -134,7 +133,6 @@ setInterval(function () {
         a = 1;
     }
     var currentBack = ".background" + b;
-    console.log(currentBack);
     // change background color of body
     //document.querySelector('body').style.backgroundimage = colors[active];
     document.querySelector(currentBack).style.backgroundImage = getCssValuePrefix() + 'linear-gradient(' + orientation + ', ' + colorGradient[active].start + ', ' + colorGradient[active].end + ')';
@@ -297,5 +295,19 @@ function showSpecial() {
         document.querySelector('.specialOptions').style.height = "0px";
         document.querySelector('.specialButton').innerHTML = "More";
         toggle = 0;
+    }
+}
+
+var counter = 0;
+
+function information(){
+    if (counter == 0){
+        document.querySelector("#infoButton").className = "fa fa-times-circle fa-2x";
+        document.querySelector(".informationBox").style.height = "120px";
+        counter = 1;
+    } else if (counter == 1) {
+        document.querySelector("#infoButton").className = "fa fa-info-circle fa-2x";
+        document.querySelector(".informationBox").style.height = "0px";
+        counter = 0;
     }
 }

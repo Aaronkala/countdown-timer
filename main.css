@@ -344,3 +344,30 @@ form {
     width: 0;
     opacity: 0;
 }
+
+#info {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+#infoButton {
+    float: right;
+}
+.informationBox {
+    height: 0px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 5px;
+    overflow-y: hidden;
+    transition: 0.3s ease;
+    text-align: right;
+}
+a {
+    text-decoration: none;
+    color: coral;
+}
+a:hover {
+    color: chocolate;
+    transition: 0.3s ease;
+    text-decoration: underline;
+}
