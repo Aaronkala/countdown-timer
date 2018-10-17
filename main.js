@@ -305,7 +305,7 @@ var counter = 0;
 function information(){
     if (counter == 0){
         document.querySelector("#infoButton").className = "fa fa-times-circle fa-2x";
-        document.querySelector(".informationBox").style.height = "140px";
+        document.querySelector(".informationBox").style.height = "50px";
         counter = 1;
     } else if (counter == 1) {
         document.querySelector("#infoButton").className = "fa fa-info-circle fa-2x";
