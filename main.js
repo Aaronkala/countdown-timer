@@ -41,12 +41,8 @@ function onYouTubeIframeAPIReady() {
 function time() {
     var myMinutes = Number(document.getElementById("myMinutes").value);
     var mySeconds = Number(document.getElementById("mySeconds").value);
-    var myVideoLink = document.getElementById("myVideoLink").value;
-    var myImage = document.getElementById("myImage").value;
     localStorage.setItem("myMinutes", myMinutes);
     localStorage.setItem("mySeconds", mySeconds);
-    localStorage.setItem("myVideoLink", myVideoLink);
-    localStorage.setItem("myImage", myImage);
     openWindow();
 };
 
@@ -105,6 +101,7 @@ function getCssValuePrefix() {
 }
 
 // SETTING BACKGROUND COLORS
+/*
 var colorGradient = [{
     start: "#ff9a9e",
     end: "#fad0c4"
@@ -146,6 +143,7 @@ setInterval(function () {
     active++;
     if (active == colorGradient.length) active = 0;
 }, 20000);
+*/
 
 
 // OPEN WINDOW
@@ -307,7 +305,7 @@ var counter = 0;
 function information(){
     if (counter == 0){
         document.querySelector("#infoButton").className = "fa fa-times-circle fa-2x";
-        document.querySelector(".informationBox").style.height = "140px";
+        document.querySelector(".informationBox").style.height = "50px";
         counter = 1;
     } else if (counter == 1) {
         document.querySelector("#infoButton").className = "fa fa-info-circle fa-2x";

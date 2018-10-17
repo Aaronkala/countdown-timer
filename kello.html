@@ -6,24 +6,17 @@
     <script src="main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-    <style id="myStyle">
-        .button:hover {
-            color: var(--main_color)
-        }
-    </style>
 </head>
 
 <body onload="displayTime();">
   <img style="opacity: 0" class="bg" src=""></img>
   <div id="player"></div>
-  <div class="container background1">
-    </div>
-    <div class="container background2">
+  <div class="container background">
     </div>
     <div class="container">
         <div class="clock_container">
             <div class="maincontent">
-                <span id="time">05:00</span><br>
+                <span id="time"></span><br>
                   <button class="button button_fullscreen" type="button" onclick="launchIntoFullscreen(document.documentElement)">Fullscreen</submit>
             </div>
         </div>

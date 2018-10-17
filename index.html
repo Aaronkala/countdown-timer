@@ -2,52 +2,43 @@
 <html>
 
 <head>
+    <meta charset=utf-8>
     <link rel="stylesheet" href="main.css">
     <script src="main.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900"
+          rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style id="myStyle">
-        .button:hover {
-            color: var(--main_color)
-        }
-    </style>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <div class="container background1">
-    </div>
-    <div class="container background2">
+    <div class="container background">
     </div>
     <div class="container">
         <div class="clock_container">
             <div class="maincontent">
-                <h2> Input countdown duration </h2>
+                <h2>Set countdown timer:</h2>
                 <form action='' method='POST' enctype='multipart/form-data'>
                     <div class="row">
-                        <input class="seethrough_form col_50" type="text" placeholder="minutes" id="myMinutes">
-                        <input class="seethrough_form col_50" type="text" placeholder="seconds" id="mySeconds">
-                    </div>
-                    <div class="specialOptions">
-                        <div class="row">
-                            <input class="seethrough_form col_50" type="text" placeholder="link for video" id="myVideoLink">
-                            <input class="seethrough_form col_50" type="text" placeholder="link for image" id="myImage">
-                        </div>
+                        <input class="seethrough_form col_50 left" type="text"
+                               placeholder="minutes" id="myMinutes">
+                        <b>:</b>
+                        <input class="seethrough_form col_50" type="text"
+                               placeholder="seconds" id="mySeconds">
                     </div>
                 </form>
                 <div class="buttons">
-                    <button class="specialButton" type="button" onClick="showSpecial()">More</button>
-                    <button class="button" type="button" onClick="time()">Submit</button>
+                    <button class="button" type="button"
+                            onClick="time()">Start</button>
                 </div>
             </div>
         </div>
     </div>
     <div id="info">
         <div class="informationBox">
-            <h4 style="margin-bottom: 2px;">Check me out in github:</h4>
-            <p style="margin-top: 2px;"><a href="https://github.com/Aaronkala/countdown-timer">github // countdown-timer</a></p>
-            <p>This project was made by <a href="http://aaronalex.fi"><strong>Aaron Hakala</strong></a></p>
-            <p><a onclick="fillTest()">Fill form with test data</a><p>
+            <p>This project was made by <a
+                    href="https://github.com/davidmezofi/countdown-timer"><strong>Dávid Mezőfi</strong></a></p>
         </div>
         <i class="fa fa-info-circle fa-2x" aria-hidden="true" onclick="information()" id="infoButton"></i>
     </div>
