@@ -105,6 +105,7 @@ function getCssValuePrefix() {
 }
 
 // SETTING BACKGROUND COLORS
+/*
 var colorGradient = [{
     start: "#ff9a9e",
     end: "#fad0c4"
@@ -146,6 +147,7 @@ setInterval(function () {
     active++;
     if (active == colorGradient.length) active = 0;
 }, 20000);
+*/
 
 
 // OPEN WINDOW

@@ -28,16 +28,7 @@ body {
 }
 .background1 {
     position:fixed;
-    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-    opacity: 1;
-    width:100vw;
-    height:100vh;
-    transition: 1s ease;
-}
-.background2 {
-    position:fixed;
-    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-    opacity: 0;
+    background-color: #225555;
     width:100vw;
     height:100vh;
     transition: 1s ease;
