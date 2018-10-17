@@ -41,12 +41,8 @@ function onYouTubeIframeAPIReady() {
 function time() {
     var myMinutes = Number(document.getElementById("myMinutes").value);
     var mySeconds = Number(document.getElementById("mySeconds").value);
-    var myVideoLink = document.getElementById("myVideoLink").value;
-    var myImage = document.getElementById("myImage").value;
     localStorage.setItem("myMinutes", myMinutes);
     localStorage.setItem("mySeconds", mySeconds);
-    localStorage.setItem("myVideoLink", myVideoLink);
-    localStorage.setItem("myImage", myImage);
     openWindow();
 };
 

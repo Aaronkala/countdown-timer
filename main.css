@@ -1,12 +1,10 @@
-:root {
-    --main_color: #034F84;
-    --secondary_color: #fff;
-}
-@font-face {
-    font-family: California;
-    src: url(monofonto.ttf);
-}
+ @import url('https://fonts.googleapis.com/css?family=Lato');
 
+:root {
+    --main_color: #225555;
+    --secondary_color: #fff;
+    font-size: 1.62em;
+}
 
 html, body {
     margin: 0px;
@@ -19,8 +17,8 @@ html, body {
 
 #time {
     color: white;
-    font-size: 12em;
-    font-family: 'California';
+    font-size: 10em;
+    font-family: 'Lato', sans-serif;
 }
 
 body {
@@ -105,6 +103,7 @@ body {
 }
 
 input.seethrough_form {
+    font-family: 'Lato', sans-serif;
     background: transparent;
     border: 3px solid white;
     border-radius: 5px;
@@ -176,7 +175,7 @@ input.seethrough_form:-moz-placeholder {
     width: 40%;
 }
 .buttons {
-    margin-top: 5px;
+    margin-top: 20px;
 }
 
 .button {
@@ -200,7 +199,7 @@ input.seethrough_form:-moz-placeholder {
 }
 
 .button:hover {
-    color: black;
+    color: #225555;
 }
 
 .button::after {
@@ -280,60 +279,6 @@ form {
     transition: 1s ease;
     visibility: hidden;
 }
-.specialOptions {
-    height: 0px;
-    overflow: hidden;
-    transition: 0.3s ease;
-}
-
-.specialButton {
-    box-sizing: border-box;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border-style: none;
-    font-family: 'Lato', sans-serif;
-    font-size: 0.8em;
-    border: 3px solid white;
-    /*  box-shadow: 0px 1px 3px black; */
-    background: transparent;
-    transition: 0.3s ease;
-    overflow: hidden;
-    color: white;
-    position: relative;
-}
-
-.specialButton:focus {
-    outline: none;
-}
-
-.specialButton:hover {
-    color: black;
-}
-
-.specialButton::after {
-    background-color: white;
-    z-index: -1;
-}
-
-.specialButton:hover::after {
-    width: 120%;
-    height: 4000%;
-    opacity: 1;
-}
-
-.specialButton::after {
-    content: "";
-    position: absolute;
-    transition: all .3s ease-out;
-    -webkit-transition: all .3s ease-out;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    -webkit-transform: translate(-50%, -50%) rotate(45deg);
-    height: 0;
-    width: 0;
-    opacity: 0;
-}
 
 #info {
     position: fixed;
@@ -347,7 +292,6 @@ form {
     height: 0px;
     border-radius: 5px;
     color: white;
-    margin-bottom: 5px;
     overflow-y: hidden;
     transition: 0.3s ease;
     text-align: right;
