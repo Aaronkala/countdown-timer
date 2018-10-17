@@ -26,12 +26,11 @@ html, body {
 body {
 
 }
-.background1 {
+.background {
     position:fixed;
     background-color: #225555;
     width:100vw;
     height:100vh;
-    transition: 1s ease;
 }
 
 .container {
